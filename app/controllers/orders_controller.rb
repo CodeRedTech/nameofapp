@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-    def index
+  def index
   end
 
   def show
@@ -15,4 +15,4 @@ class OrdersController < ApplicationController
   def destroy
   end
 
-end
+  end
