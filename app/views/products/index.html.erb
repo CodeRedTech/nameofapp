@@ -4,11 +4,13 @@
 
 
     
-    <div class="container">
+  <div class="container">
   <div class="row">
-      <%= render @products %>
+  <% @products.each do |product| %>
+   <%= render partial: "product", collection: @products %>
+    <% end %>
+    </div><!-- /col -->
   </div>
-</div>
 
 
 <br>
