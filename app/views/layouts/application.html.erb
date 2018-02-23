@@ -21,6 +21,15 @@
          <li><%= link_to "About", simple_pages_about_path %></li>
          <li><%= link_to "Home", root_path %></li>
      </ul>
+     <ul class="nav pull-right">
+       <li>
+       <% if user_signed_in? %>
+       <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+       <% else %>
+       <%= link_to('Login', new_user_session_path) %>
+       <% end %>
+       </li>
+      </ul>
         
         <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
          <%= form.label :q, 'Search for:' %>
@@ -29,6 +38,9 @@
         <% end %>
         
     </nav>
+      
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>  
       
     <%= yield %>
 
