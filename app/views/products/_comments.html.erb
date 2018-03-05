@@ -6,6 +6,9 @@
             <p><%= "Rating: #{comment.rating}/5" %></p>
             <p><%= comment.body %></p>
         </div>
+    
+      <%= link_to ('<span class="glyphicon glyphicon-remove"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
         
         <div class="rated" data-score="<%= comment.rating %>"></div>
     <% end %>
