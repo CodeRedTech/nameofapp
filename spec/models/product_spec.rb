@@ -1,8 +1,9 @@
 require 'rails_helper'
 
-  describe Product do
-    let(:product) { Product.create!(name: "race bike") }
-  end
+describe Product do
+  let(:product) { Product.create!(name: "race bike") }
+
+let(:user) {User.create! (email:"samantha@coderedtech.net", password:"Charlos2")}
 
   before do
     product.comments.create!(rating: 1, user: user, body: "Awful bike!")
@@ -18,6 +19,6 @@ require 'rails_helper'
     expect(Product.new(description: "Nice bike")).not_to be_valid
   end
 
-   let(:user) {User.create!  (email:"samantha@coderedtech.net", password:"Charlos2")}
-  end
+   
+  
 end
