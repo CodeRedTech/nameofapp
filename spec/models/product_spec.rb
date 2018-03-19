@@ -12,7 +12,7 @@ let(:user) {User.create! (email:"samantha@coderedtech.net", password:"Charlos2")
   end
 
   it "returns the average rating of all comments" do
-    expect(Product.new).to eq "3"
+    expect(Product.new).to eq 3
   end
 
   it "is not valid without a name" do
