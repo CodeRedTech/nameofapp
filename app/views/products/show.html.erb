@@ -35,3 +35,6 @@
 <%= @product.comments.order(rating: :asc).first %>
 <%= render 'new_comment' %>
 <%= render 'comments' %>
+<%= form_with(url: '/payments/create') do |form| %>
+  <%= render partial: "shared/stripe_checkout_button" %>
+<% end %>
