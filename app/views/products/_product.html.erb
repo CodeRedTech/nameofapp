@@ -4,5 +4,6 @@
       <p><%= product.description %></p>
       <%= image_tag(product.image_url, class: 'img-responsive') %>
       <strong>$ <%= product.price %></strong>
+      <% logger.debug "Product: #{@product.name}"%>
     </div><!-- /col -->
 </div>
