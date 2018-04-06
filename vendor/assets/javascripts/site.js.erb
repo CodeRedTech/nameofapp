@@ -1,16 +1,17 @@
 $(document).on('turbolinks:load', function(){
-   $('.rating').raty({
+  $('.rating').raty({
   starHalf: '<%= asset_path 'star-half.png' %>',
   starOff: '<%= asset_path 'star-off.png' %>',
   starOn: '<%= asset_path 'star-on.png' %>',
   scoreName: 'comment[rating]'
+  $('.img-zoom').elevateZoom();
 });
     
     
-<script>alert('Hello');</script>
+
     
 
-     $('.rated').raty({
+    $('.rated').raty({
     starHalf: '<%= asset_path 'star-half.png' %>',
     starOff: '<%= asset_path 'star-off.png' %>',
     starOn: '<%= asset_path 'star-on.png' %>',
