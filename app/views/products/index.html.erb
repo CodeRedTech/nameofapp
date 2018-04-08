@@ -6,7 +6,7 @@
     
   <div class="container">
   <div class="row">
-  <% @products.each do |product| %>
+  <% cache(cache_key_for_products) do |product| %>
    <%= render partial: "product", collection: @products %>
     <% end %>
     </div><!-- /col -->
@@ -16,7 +16,7 @@
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-
+q   
 
 
 
