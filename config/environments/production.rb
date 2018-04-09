@@ -89,6 +89,10 @@ Rails.application.configure do
                      :socket_failure_delay => 0.2,
                      :down_retry_delay => 60
                     }
+  config.action_dispatch.rack_cache = {
+  metastore: "redis://localhost:6379/1/metastore",
+  entitystore: "redis://localhost:6379/1/entitystore"
+  }
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
