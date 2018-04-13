@@ -1,21 +1,20 @@
-<p id="notice"><%= notice %></p>
+<div class="pull-right">
+  <%= link_to 'New Product', new_product_path, class: "btn btn-default" %>
+</div>
+<div class="clearfix"></div>
 
 <h1>Products</h1>
 
 
-    
-  <div class="container">
+<div class="container">
   <div class="row">
-  <% cache(cache_key_for_products) do |product| %>
-   <%= render partial: "product", collection: @products %>
+    <% cache(cache_key_for_products) do |product| %>
+      <%= render partial: "product", collection: @products %>
     <% end %>
-    </div><!-- /col -->
-  </div>
+  </div><!-- /col -->
+</div>
 
 
 <br>
 
 <%= link_to 'New Product', new_product_path %>
-
-
-

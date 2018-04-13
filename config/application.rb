@@ -16,7 +16,9 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+# config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
+
+# MyApplication::Application.config.session_store :redis_store, servers: ["redis://localhost:6379/0/session"]
 
 module Nameofapp
   class Application < Rails::Application

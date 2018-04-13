@@ -1,13 +1,13 @@
 class SimplePagesController < ApplicationController
   def index
-  end 
-    
+  end
+
   def landing_page
     @products = Product.limit(3)
     @featured_product = Product.last
   end
-    
-    
+
+
   def thank_you
     @name = params[:name]
     @email = params[:email]
