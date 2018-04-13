@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe Product do
   before do
-    @product = Product.create!(name: "race bike")
+    @product = Product.create!(name: "race bike", description: "This is a test", price: 200)
     @user = User.create!(email:"samantha@coderedtech.net", password:"Charlos2")
     @product.comments.create!(rating: 1, user: @user, body: "Awful bike!")
     @product.comments.create!(rating: 3, user: @user, body: "Ok bike!")

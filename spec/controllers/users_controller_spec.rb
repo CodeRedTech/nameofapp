@@ -1,15 +1,16 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-# let(:user) { User.create!(email: 'peter@example.com', password: '1234567890') }
-@user = FactoryBot.create(:user)
+  before do
+    @user = FactoryBot.create(:user)
+  end
 
   describe 'GET #show' do
     context 'when a user is logged in' do
       before do
         it "loads the correct user details" do
           expect(response).to have_http_status(200)
-          expect(assigns(:@user)).to eq user
+          expect(assigns(:@user)).to eq @user
         end
       end
     end
