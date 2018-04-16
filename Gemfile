@@ -43,6 +43,7 @@ gem 'stripe'
 gem 'brakeman'
 gem 'dalli'
 gem 'redis-rails'
+gem 'ratyrate'
 group :development, :test do
 gem 'rspec-rails', '~> 3.7'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
