@@ -10,7 +10,7 @@
 <strong><%= number_to_currency(@product.price) %></strong>
 <p><%= @product.description %></p>
 
-<%= image_tag(@product.image_url, class: "img-responsive img-zoom", data_zoom_image: "@product.image_url") %>
+<%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: "@product.image_url") %>
 
 <br>
 
@@ -22,10 +22,8 @@
 <hr>
 
 <p>Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
-<%= @product.highest_rating_comment %>
-<%= @product.lowest_rating_comment %>
 
-<%= render 'new_comment' %>
-<%= render 'comments' %>
+<%= render 'comments/new_comment' %>
+<%= render 'comments/comments' %>
 <br>
 

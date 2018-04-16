@@ -1,6 +1,6 @@
 <% if signed_in? %>
   <h4>Add a review:</h4>
-  <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
+  <%= form_for([@product, @product.comments.build]) do |f| %>
     <div class="col-sm-8">
       <div class="form-field">
         <%= f.label :body, "Comments"%><br>
@@ -8,10 +8,10 @@
       </div>
     </div>
     <div class="col-sm-8">
-      <div class="form-field">
-        <%= f.label :rating %><br>
-        <%= f.text_field :rating, class: "form-control" %>
-      </div>
+      <p>
+        <div class="rating"></div>
+      </p>
+    </div>
     </div>
     <div class="col-sm-8">
       <%= f.submit "Submit", class: "btn btn-default" %>
