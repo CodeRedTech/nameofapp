@@ -1,6 +1,7 @@
 *.rbc
 capybara-*.html
 .rspec
+redis-4.0.9
 /log
 /tmp
 /db/*.sqlite3
