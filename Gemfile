@@ -38,6 +38,7 @@ gem 'elevatezoom-rails'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
+gem 'rack-cache'
 gem 'cancancan', '~> 1.10'
 gem 'rails-controller-testing'
 gem "factory_bot_rails", "~> 4.0"
