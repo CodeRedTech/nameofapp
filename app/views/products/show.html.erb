@@ -23,6 +23,8 @@
 
 <p>Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
+<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
 <%= render 'comments/new_comment' %>
 <%= render 'comments/comments' %>
 <br>
