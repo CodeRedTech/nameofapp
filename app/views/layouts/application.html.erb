@@ -37,6 +37,12 @@
                   <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
                   <%= form.submit 'Search', class:"btn btn-default" %>
                 <% end %>
+
+                <%# form_with(url: products_path, method: 'get', local: true) do |form| %>
+                  <%# collection_select(:product, :product_id, Product.all, :id, :name, class: "form-control") %>
+                  <%# form.submit 'Search', class:"btn btn-default" %>
+                <%# end %>
+                <!-- This is for the dropdown showing all products -->
               </div>
             </form>
             <ul class="nav navbar-nav navbar-right">
