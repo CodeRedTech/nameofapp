@@ -3,14 +3,16 @@
   <%= link_to 'Back', products_path, class: "btn btn-default" %>
 </div>
 
-<h1>
-  <%= @product.name %>
-</h1>
+<div data-product-id="<%= @product.id %>">
+  <h1>
+    <%= @product.name %>
+  </h1>
 
-<strong><%= number_to_currency(@product.price) %></strong>
-<p><%= @product.description %></p>
+  <strong><%= number_to_currency(@product.price) %></strong>
+  <p><%= @product.description %></p>
 
-<%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: "@product.image_url") %>
+  <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: "@product.image_url") %>
+</div>
 
 <br>
 

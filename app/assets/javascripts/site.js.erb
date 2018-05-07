@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){
+$(document).on('turbolinks:load ajaxSuccess', function() {
   $('.img-zoom').elevateZoom();
 
   $('.rating').raty({
@@ -17,6 +17,4 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
-
-  // $(".form-control").chosen(); Comment this out form dropdown when switched
 });
