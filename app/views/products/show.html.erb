@@ -1,33 +1,33 @@
-<div class="pull-right">
-  <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
-  <%= link_to 'Back', products_path, class: "btn btn-default" %>
+<div class="container">
+  <div class="pull-right">
+    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
+    <%= link_to 'Back', products_path, class: "btn btn-default" %>
+  </div>
+
+  <div data-product-id="<%= @product.id %>">
+    <h1><%= @product.name %></h1>
+    <strong><%= number_to_currency(@product.price) %></strong>
+    <p><%= @product.description %></p>
+    <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: "@product.image_url") %>
+  </div>
+
+  <br>
+
+  <%= form_with(url: '/payments/create') do |form| %>
+    <%= hidden_field_tag(:product_id, @product.id) %>
+    <%= render partial: "shared/stripe_checkout_button" %>
+  <% end %>
+
+  <hr>
+
+  <p>Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
+
+  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
+
+  <%= render 'comments/new_comment' %>
+  <%= render 'comments/comments' %>
+  <br>
 </div>
 
-<div data-product-id="<%= @product.id %>">
-  <h1>
-    <%= @product.name %>
-  </h1>
 
-  <strong><%= number_to_currency(@product.price) %></strong>
-  <p><%= @product.description %></p>
-
-  <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: "@product.image_url") %>
-</div>
-
-<br>
-
-<%= form_with(url: '/payments/create') do |form| %>
-  <%= hidden_field_tag(:product_id, @product.id) %>
-  <%= render partial: "shared/stripe_checkout_button" %>
-<% end %>
-
-<hr>
-
-<p>Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div> </p>
-
-<div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-
-<%= render 'comments/new_comment' %>
-<%= render 'comments/comments' %>
-<br>
 
