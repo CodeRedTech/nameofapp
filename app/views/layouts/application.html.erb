@@ -61,14 +61,10 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-      <% if flash[:notice] %>
-        <p id="notice" class="alert alert-info"><%= flash[:notice] %></p>
-      <% end %>
-      <% if flash[:success] %>
-        <p id="notice" class="alert alert-success"><%= flash[:success] %></p>
-      <% end %>
-      <% if flash[:error] %>
-        <p id="notice" class="alert alert-warning"><%= flash[:error] %></p>
+      <% if notice %>
+      <p class="alert alert-info"><%= notice %></p>
+      <% elsif alert %>
+      <p class="alert alert-info"><%= alert %></p>
       <% end %>
 
       <div class="container">
