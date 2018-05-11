@@ -2,10 +2,10 @@
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
   <div class="sed">
     <h4>Add a review</h4>
-      <%= f.text_area(:body, cols:60, rows: 4) %><br>
+      <%= f.text_area(:body, cols:60, rows: 4), class: "form-control" %><br>
       Rating: <span class="rating"></span><br>
       <p>
-        <%= f.submit "Submit" %>
+        <%= f.submit "Submit", class: "btn btn-default" %>
       </p>
   </div>
   <% end %>
