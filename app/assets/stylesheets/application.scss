@@ -57,7 +57,8 @@ p {
 }
 
 a {
-  color: silver;
+  color: black;
+  font-size: 30px;
 }
 
 .carousel-caption {
@@ -68,6 +69,14 @@ a {
     border: 50px solid transparent;
     padding: 30px;
     border-image: url(border.jpg) 80 round;
+}
+
+label {
+  font-size: 25px;
+}
+
+.form-control {
+  font-size: 25px;
 }
 
 
