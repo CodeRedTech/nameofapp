@@ -43,13 +43,34 @@
   font-size: 25px;
 }
 
+h1 {
+  font-size: 45px;
+}
+
 h2 {
   font-size: 40px;
+}
+
+p {
+  font-size: 55px;
+  color: darkred;
+}
+
+a {
+  color: silver;
 }
 
 .carousel-caption {
   font-size: 25px;
 }
+
+#borderimg { 
+    border: 50px solid transparent;
+    padding: 30px;
+    border-image: url(border.jpg) 80 round;
+}
+
+
 
 /*footer stuff*/
 
