@@ -24,7 +24,7 @@ describe Comment do
       expect(Comment.new(body: 'body body body', rating: 3, user: user, product: product)).to be_valid
       expect(Comment.new(body: 'body body body', rating: 1, user: user, product: product)).to be_valid
       expect(Comment.new(body: 'body body body', rating: 5, user: user, product: product)).to be_valid
-      expect(Comment.new(body: 'body body body', rating: -4, user: user, product: product)).not_to be_valid
+      expect(Comment.new(body: 'body body body', rating: 4, user: user, product: product)).to be_valid
       expect(Comment.new(body: 'body body body', rating: 0, user: user, product: product)).not_to be_valid
       expect(Comment.new(body: 'body body body', rating: 6, user: user, product: product)).not_to be_valid
     end

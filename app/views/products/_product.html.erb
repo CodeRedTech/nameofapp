@@ -1,6 +1,7 @@
 <div class="col-sm-6 col-md-4">
   <h1><%= link_to product.name, product %></h1>
   <p><%= product.description %></p>
+  <p><%= product.colour %></p>
   <%= image_tag(product.image_url, class: 'img-responsive') %>
   <strong>$ <%= product.price %></strong>
 
