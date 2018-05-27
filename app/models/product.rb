@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   has_many :orders
   has_many :comments
-  validates :name, :price, presence: true
+  validates :name, :description, :image_url, :price, presence: true
 
   def self.search(search_term)
     unless Rails.env.production?

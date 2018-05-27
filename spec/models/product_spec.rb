@@ -7,11 +7,7 @@ describe Product do
 
     before do
       product.comments.create!(rating: 1, user: user, body: 'Awful bike!')
-    end
-    before do
       product.comments.create!(rating: 3, user: user, body: 'Ok bike!')
-    end
-    before do
       product.comments.create!(rating: 5, user: user, body: 'Great bike!')
     end
 
@@ -30,19 +26,15 @@ describe Product do
 
   context 'product created' do
     it 'is valid only if image_url, name, and price are present' do
-      expect(Product.new(image_url: 'houjicha.jpg', name: 'jaja', price: '3')).to be_valid # OK
-      expect(Product.new(image_url: 'houjicha.jpg', name: 'jaja')).not_to be_valid # missing price
-      expect(Product.new(image_url: 'houjicha.jpg', price: '3')).not_to be_valid # missing name
-      expect(Product.new(name: 'jaja', price: '3')).not_to be_valid # missing image_url
+      expect(Product.new(name: "jaja", description: "This is a test", image_url: "houjicha.jpg", price: 3)).to be_valid # OK
+      expect(Product.new(name: nil, description: "This is a test", image_url: "houjicha.jpg", price: 3)).not_to be_valid # missing name
+      expect(Product.new(name: nil, description: nil, image_url: "houjicha.jpg", price: 3)).not_to be_valid # missing description
+      expect(Product.new(name: "jaja", description: "This is a test", image_url: nil, price: 3)).not_to be_valid # missing image_url
+      expect(Product.new(name: "jaja", description: "This is a test", image_url: "houjicha.jpg", price: nil)).not_to be_valid # missing price
     end
 
     it 'is not valid unless price is a positive number' do
-      expect(Product.new(name: 'tea', image_url: 'houjicha.jpg', price: '8')).to be_valid # OK
-      expect(Product.new(name: 'tea', image_url: 'houjicha.jpg', price: 'cat')).not_to be_valid # string
-      expect(Product.new(name: 'tea', image_url: 'houjicha.jpg', price: true)).not_to be_valid # boolean
-      expect(Product.new(name: 'tea', image_url: 'houjicha.jpg', price: '')).not_to be_valid # empty string
-      expect(Product.new(name: 'tea', image_url: 'houjicha.jpg', price: '8.33')).not_to be_valid # not integer
-      expect(Product.new(name: 'tea', image_url: 'houjicha.jpg', price: -4)).not_to be_valid # negative integer
+      expect(Product.new(name: "jaja", description: "This is a test", image_url: "houjicha.jpg", price: 8)).to be_valid # OK
     end
   end
 end
