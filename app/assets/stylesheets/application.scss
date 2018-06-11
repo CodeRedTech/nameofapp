@@ -25,6 +25,7 @@
     color: floralwhite;
     font-family: 'Alex Brush', cursive;
     font-size: 50px;
+    margin-top: 10px;
      &:hover {
     color: black;
   }
@@ -38,6 +39,22 @@
       color: black;
   }
 }
+
+.nav.navbar-nav.navbar-right {
+    margin-top: 8px;
+}
+
+input#q {
+    margin-top: 5px;
+  margin-left: 33px;
+}
+
+.btn.nav-search-btn {
+    font-size: 15px;
+    padding: 5.5px 12px;
+    margin-top: 5px;
+}
+
 
 .btn {
   font-size: 25px;

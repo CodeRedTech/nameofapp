@@ -37,7 +37,7 @@
               <div class="form-group">
                 <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
                   <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
-                  <%= form.submit 'Search', class:"btn btn-default" %>
+                  <%= form.submit 'Search', class:"btn btn-default nav-search-btn" %>
                 <% end %>
 
                 <%# form_with(url: products_path, method: 'get', local: true) do |form| %>
