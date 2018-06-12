@@ -36,7 +36,8 @@
     font-family: 'Alex Brush', cursive;
     font-size: 30px;
     &:hover {
-      color: black;
+      color: lightpink;
+      font-size: 35px;
   }
 }
 
@@ -46,13 +47,17 @@
 
 input#q {
     margin-top: 5px;
-  margin-left: 33px;
+    margin-left: 33px;
 }
 
 .btn.nav-search-btn {
     font-size: 15px;
     padding: 5.5px 12px;
     margin-top: 5px;
+}
+
+.navbar-form {
+  display: inline-block;
 }
 
 

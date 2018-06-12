@@ -8,6 +8,10 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       @products = Product.search(search_term)
+       if @products.empty?
+         flash.now[:notice]="does not exist"
+         @products=Product.all
+       end
     else
       @products = Product.all
     end

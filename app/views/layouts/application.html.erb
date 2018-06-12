@@ -33,20 +33,19 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+    
+                <%= form_with(url: products_path, method: 'get', local: true, class:"navbar-form") do |form| %>
                   <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control" %>
                   <%= form.submit 'Search', class:"btn btn-default nav-search-btn" %>
                 <% end %>
+               
 
                 <%# form_with(url: products_path, method: 'get', local: true) do |form| %>
                   <%# collection_select(:product, :product_id, Product.all, :id, :name, class: "form-control") %>
                   <%# form.submit 'Search', class:"btn btn-default" %>
                 <%# end %>
                 <!-- This is for the dropdown showing all products -->
-              </div>
-            </form>
+              
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to "Contact",  simple_pages_contact_path %></li>
               <li><%= link_to "About", simple_pages_about_path %></li>
