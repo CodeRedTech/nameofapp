@@ -27,7 +27,7 @@
     font-size: 50px;
     margin-top: 10px;
      &:hover {
-    color: black;
+    color: lightpink;
   }
 }
 
@@ -44,6 +44,7 @@
 .nav.navbar-nav.navbar-right {
     margin-top: 8px;
 }
+
 
 input#q {
     margin-top: 5px;
@@ -66,24 +67,28 @@ input#q {
   font-family: 'Raleway', sans-serif;
 }
 
-h1 {
+h1, h2 {
   font-size: 45px;
+  margin-bottom: 28px;
+  text-align: center;
 }
 
-h2 {
-  font-size: 40px;
-}
 
 p {
-  font-size: 55px;
+  font-size: 22px;
   color: darkred;
+  font-family: 'Raleway', sans-serif;
 }
 
 a {
   color: black;
-  font-size: 30px;
+  font-size: 23px;
   font-family: 'Raleway', sans-serif;
 
+}
+
+strong {
+  font-family: 'Raleway', sans-serif;
 }
 
 .carousel-caption {
@@ -92,9 +97,9 @@ a {
 }
 
 #borderimg { 
-    border: 50px solid transparent;
-    padding: 30px;
-    border-image: url(border.jpg) 80 round;
+    border: 43px solid transparent;
+    padding: 15px;
+    border-image: url(border.jpg) 108 round;
 }
 
 label {
