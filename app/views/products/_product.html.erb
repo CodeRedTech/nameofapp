@@ -2,7 +2,10 @@
   <h1><%= link_to product.name, product %></h1>
   <p><%= product.description %></p>
   <p><%= product.colour %></p>
-  <%= image_tag(product.image_url, class: 'img-responsive') %>
+  <%= link_to product do %>
+    <%= image_tag(product.image_url, class: 'img-responsive') %>
+  <% end %>
   <strong>$ <%= product.price %></strong>
 
 </div><!-- /col -->
+
